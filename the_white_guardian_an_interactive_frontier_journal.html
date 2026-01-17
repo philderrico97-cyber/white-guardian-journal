@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The White Guardian — Spirit-Bound Journal</title>
+
+<style>
+@font-face { font-family: 'Cinzel'; src: local('Cinzel'); }
+@font-face { font-family: 'IM Fell English'; src: local('IM Fell English'); }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #2b2014 0%, #0f0b07 75%);
+  font-family: 'IM Fell English', 'Garamond', serif;
+  color: #2a1f14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.book {
+  width: 960px;
+  height: 580px;
+  perspective: 2600px;
+  position: relative;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #f6e7c4, #dbc89c);
+  box-shadow: inset 0 0 50px rgba(0,0,0,.25), 0 30px 60px rgba(0,0,0,.55);
+  transform-origin: left center;
+  transition: transform 1.4s cubic-bezier(.4,.0,.2,1), z-index 1.4s;
+  padding: 42px 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(120,80,40,.08), transparent 40%),
+    repeating-linear-gradient(45deg, rgba(120,80,40,.04) 0px, rgba(120,80,40,.04) 2px, transparent 2px, transparent 7px);
+  pointer-events: none;
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 120px rgba(0,0,0,.25);
+  pointer-events: none;
+}
+
+.cover h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 44px;
+  letter-spacing: 6px;
+  text-align: center;
+  margin-top: 110px;
+}
+
+.cover h2 {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-top: 22px;
+}
+
+.symbol {
+  text-align: center;
+  font-size: 52px;
+  margin-top: 30px;
+  opacity: .8;
+}
+
+.chapter-title {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-family: 'Cinzel', serif;
+  font-size: 64px;
+  line-height: .9;
+  padding-right: 10px;
+}
+
+.quote {
+  font-style: italic;
+  text-align: center;
+  margin: 24px 40px;
+  opacity: .85;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 18px;
+  right: 28px;
+  font-size: 12px;
+  opacity: .55;
+}
+
+.controls {
+  position: absolute;
+  bottom: -70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background: #3a2b1a;
+  color: #f6e7c4;
+  border: none;
+  padding: 12px 26px;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,.6);
+}
+
+button:hover { background: #4c3a22; }
+
+.glow {
+  animation: ember 6s infinite alternate;
+}
+
+@keyframes ember {
+  from { text-shadow: 0 0 6px rgba(180,120,60,.3); }
+  to   { text-shadow: 0 0 16px rgba(180,120,60,.6); }
+}
+</style>
+</head>
+
+<body>
+<div class="book">
+
+<!-- COVER -->
+<div class="page cover" style="z-index:9">
+  <h1 class="glow">The White Guardian</h1>
+  <h2>A Spirit-Bound Chronicle of Ta-Za</h2>
+  <div class="symbol">ᚦ ᚢ 🐾 ᚢ ᚦ</div>
+  <p class="quote">"Some names are not given. They awaken."</p>
+</div>
+
+<!-- CHAPTER I -->
+<div class="page" style="z-index:8">
+  <div class="chapter-title">Chapter I — Born Where Spirits Listen</div>
+  <p class="dropcap">Ta-Za was born where the mountains held their breath. His first cry rose into cold starlight, and the elders felt the old ones stir. His hair was white as snow untouched by foot or blood.</p>
+  <p>Animals lingered near him. Fires burned steady in his presence. The elders spoke softly, for children like this belonged not to time, but to balance.</p>
+  <div class="quote">"He walks with one foot in memory."</div>
+  <div class="page-number">I</div>
+</div>
+
+<!-- CHAPTER II -->
+<div class="page" style="z-index:7">
+  <div class="chapter-title">Chapter II — The Night of Blood and Paw</div>
+  <p class="dropcap">Rifles shattered prayer. Fire devoured cedar and hide. Ta-Za ran toward death without thought.</p>
+  <p>When his blood touched the snow, the guardian answered. Bone bent. Fur rose. The White Cat stood where mercy had been broken.</p>
+  <div class="quote">"He did not hunt. He corrected."</div>
+  <div class="page-number">II</div>
+</div>
+
+<!-- CHAPTER III -->
+<div class="page" style="z-index:6">
+  <div class="chapter-title">Chapter III — The Gentle Warrior</div>
+  <p class="dropcap">Control was learned through pain. Prayer through loss. Each transformation cost him something he could never reclaim.</p>
+  <p>Men spoke of a silver-haired warrior who calmed storms with his voice, and a white shadow that followed cruelty home.</p>
+  <div class="quote">"Strength that does not roar endures longest."</div>
+  <div class="page-number">III</div>
+</div>
+
+<!-- CHAPTER IV -->
+<div class="page" style="z-index:5">
+  <div class="chapter-title">Chapter IV — Exile of the White Cat</div>
+  <p class="dropcap">The elders sent him away so the world would not devour him. Rails cut the earth. Smoke replaced prayer.</p>
+  <p>Ta-Za became a story that followed lonely roads — a reminder that the land still remembered who it belonged to.</p>
+  <div class="quote">"A guardian without a home guards everything."</div>
+  <div class="page-number">IV</div>
+</div>
+
+<!-- CHAPTER V -->
+<div class="page" style="z-index:4">
+  <div class="chapter-title">Chapter V — The White Guardian, Now</div>
+  <p class="dropcap">Now he walks between eras. Soft-spoken. Watchful. Beautiful in a way that warns rather than invites.</p>
+  <p>When injustice bleeds into soil, the White Guardian answers — not in rage, but in balance.</p>
+  <div class="quote glow">"As long as the land remembers, so will he."</div>
+  <div class="page-number">V</div>
+</div>
+
+<!-- SECRET SPIRIT PAGE -->
+<div class="page" style="z-index:3">
+  <div class="chapter-title">The Spirit Testament</div>
+  <p class="dropcap">If you read this page, you walk close to the veil. Know this — guardians are not born to be loved, but to endure.</p>
+  <p>Should you hear padded steps where no beast walks, do not run. Offer respect. The White Guardian watches still.</p>
+  <div class="quote">"Balance is never loud."</div>
+  <div class="page-number">✶</div>
+</div>
+
+<div class="controls">
+  <button onclick="prevPage()">◀ Turn Back</button>
+  <button onclick="nextPage()">Turn Page ▶</button>
+</div>
+
+</div>
+
+<script>
+let current = 0;
+const pages = document.querySelectorAll('.page');
+function updatePages(){
+  pages.forEach((p,i)=>{
+    if(i < current){ p.style.transform='rotateY(-180deg)'; p.style.zIndex=i; }
+    else{ p.style.transform='rotateY(0deg)'; p.style.zIndex=pages.length-i; }
+  });
+}
+function nextPage(){ if(current < pages.length-1){ current++; updatePages(); }}
+function prevPage(){ if(current > 0){ current--; updatePages(); }}
+updatePages();
+</script>
+</body>
+</html>
